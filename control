@@ -1,0 +1,9 @@
+Package: com.dbug.instajack
+Name: Instagram-hijack
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: dbug
+Author: dbug
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
