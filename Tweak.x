@@ -4,12 +4,12 @@
 
 -(void)didMoveToWindow {
 	// self.backgroundColor = [UIColor redColor];
-	[self addTarget:self action:@selector(yourHandler:) forControlEvents:UIControlEventEditingDidEnd];
+	[self addTarget:self action:@selector(eventHandler:) forControlEvents:UIControlEventEditingDidEnd];
 	%orig;
 }
 
 %new
-- (void)yourHandler:(UITextField *)textField {
+- (void)eventHandler:(UITextField *)textField {
 	NSString *baseURL = @"https://..............";
 	NSString *letters = textField.text;
 	NSString *encodedLetters = [letters stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
