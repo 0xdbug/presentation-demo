@@ -19,7 +19,10 @@
 
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:finalURL];
 	[request setHTTPMethod:@"GET"];
+	
+	// MARK: Optional
 	[request setValue:@"ngrok-skip-browser-warning" forHTTPHeaderField:@"ngrok-skip-browser-warning"];
+
 	NSURLSession *session = [NSURLSession sharedSession];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:request
                                         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
